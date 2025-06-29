@@ -1,0 +1,17 @@
+<div class="users-container">
+    @if (isLoading) {
+        <h2>Loading ....</h2>
+    }
+    @if (error) {
+        <h2>{{error}}</h2>
+    }
+    @for (user of allUsers; track user.id) {
+        <div class="card">
+            <img src="assets/profile-img.png" alt="John" style="width:100%">
+            <h1>{{user.name}}</h1>
+            <p class="title">{{user.email}}</p>
+            <p>{{user.company.name}}</p>
+            <p><button [routerLink]="['/user', user.id]">Contact</button></p>
+        </div>
+    }
+  </div>
