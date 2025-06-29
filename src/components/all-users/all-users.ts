@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserApiService } from '../../services/user-api-service';
-import { response } from 'express';
 import { User } from '../../types/user';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-
 @Component({
   selector: 'app-all-users',
   imports: [CommonModule, RouterModule],
