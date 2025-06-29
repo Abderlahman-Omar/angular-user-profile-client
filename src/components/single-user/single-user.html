@@ -1,1 +1,17 @@
-<p>single-user works!</p>
+
+@if (isLoading) {
+    <h2>Loading ....</h2>
+}
+@else if (error) {
+    <h2>{{error}}</h2>
+}
+@else {
+
+<div class="card">
+    <img src="assets/profile-img.png" alt="John" style="width:100%">
+    <h1>{{userDetails?.name}}</h1>
+    <p class="title">{{userDetails?.email}}</p>
+    <p>{{userDetails?.company?.name}}</p>
+    <p><button [routerLink]="['/']">Return Back</button></p>
+</div>
+}
